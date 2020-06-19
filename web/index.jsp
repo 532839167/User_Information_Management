@@ -24,6 +24,8 @@
   </script>
 </head>
 <body>
+
+<div>${user.name}, Welcome! </div>
 <div align="center">
   <a
           <%--  用 EL 表达式  --%>
