@@ -32,4 +32,22 @@ public class UserDaoImpl implements UserDao {
             return null;
         }
     }
+
+    @Override
+    public void add(User user) {
+        // 定义 sql
+        String sql = "insert into user values(null, ?, ?, ?, ?, ?, ?, null, null)";
+
+        // 执行
+        template.update(sql, user.getName(), user.getGender(), user.getAge(), user.getAddress(), user.getCell(), user.getEmail());
+    }
+
+    @Override
+    public void delete(int id) {
+        // 定义 sql
+        String sql = "delete from user where id = ?";
+
+        // 执行 sql
+        template.update(sql, id);
+    }
 }

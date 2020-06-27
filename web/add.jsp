@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- HTML5文档-->
 <!DOCTYPE html>
 <!-- 网页使用的语言 -->
@@ -24,7 +25,7 @@
 <body>
 <div class="container">
     <center><h3>Add New User</h3></center>
-    <form action="" method="post">
+    <form action="${pageContext.request.contextPath}/addUserServlet" method="post">
         <div class="form-group">
             <label for="name">Name: </label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Please enter your name">
@@ -32,8 +33,8 @@
 
         <div class="form-group">
             <label>Gender: </label>
-            <input type="radio" name="sex" value="Male" checked="checked"/>Male
-            <input type="radio" name="sex" value="Female"/>Female
+            <input type="radio" name="gender" value="Male" checked="checked"/>Male
+            <input type="radio" name="gender" value="Female"/>Female
         </div>
 
         <div class="form-group">

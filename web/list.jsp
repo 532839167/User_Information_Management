@@ -28,6 +28,18 @@
             text-align: center;
         }
     </style>
+
+    <script>
+        function deleteUser(id){
+            // 用户提示
+            if (confirm("Delete this user? ")) {
+                // 访问路径
+                location.href = "${pageContext.request.contextPath}/delUserServlet?id="+id;
+            }
+
+        }
+
+    </script>
 </head>
 <body>
 <div class="container">
@@ -55,8 +67,8 @@
 
     <div style="float: right; margin: 5px;">
 
-        <a class="btn btn-primary" href="add.html">Add New User</a>
-        <a class="btn btn-primary" href="add.html">Delete Selected User</a>
+        <a class="btn btn-primary" href="${pageContext.request.contextPath}add.jsp">Add New User</a>
+        <a class="btn btn-primary" href="add.jsp">Delete Selected User</a>
 
     </div>
 
@@ -84,7 +96,7 @@
                 <td>${user.address}</td>
                 <td>${user.cell}</td>
                 <td>${user.email}</td>
-                <td><a class="btn btn-default btn-sm" href="update.html">Edit</a>&nbsp;<a class="btn btn-default btn-sm" href="">Delete</a></td>
+                <td><a class="btn btn-default btn-sm" href="update.html">Edit</a>&nbsp;<a class="btn btn-default btn-sm" href="javascript:deleteUser(${user.id});">Delete</a></td>
             </tr>
         </c:forEach>
 

@@ -24,12 +24,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void addUser(User user) {
-
+        dao.add(user);
     }
 
     @Override
     public void deleteUser(String id) {
-
+        dao.delete(Integer.parseInt(id));
     }
 
     @Override

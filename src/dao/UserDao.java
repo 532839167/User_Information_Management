@@ -14,4 +14,7 @@ public interface UserDao {
 
     User findUserByUsernameAndPassword(String username, String password);
 
+    void add(User user);
+
+    void delete(int i);
 }
