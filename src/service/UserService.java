@@ -11,16 +11,16 @@ import java.util.Map;
 
 public interface UserService {
 
-    // 查询所有用户信息
+    // Query all user information
     public List<User> findAll();
 
-    //登录方法
+    //Log in
     User login(User user);
 
-    //保存User
+    // Save User
     void addUser(User user);
 
-    // 根据id删除User
+    // Delete User
     void deleteUser(String id);
 
     // 根据id查询
@@ -29,9 +29,4 @@ public interface UserService {
     // 修改用户信息
     void updateUser(User user);
 
-    // 批量删除用户
-    void delSelectedUser(String[] ids);
-
-    // 分页条件查询
-    //PageBean<User> findUserByPage(String currentPage, String rows, Map<String, String[]> condition);
 }

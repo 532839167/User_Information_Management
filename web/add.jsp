@@ -1,8 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- HTML5文档-->
 <!DOCTYPE html>
-<!-- 网页使用的语言 -->
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <!-- 指定字符集 -->
     <meta charset="utf-8">
